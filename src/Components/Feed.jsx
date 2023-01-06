@@ -3,11 +3,14 @@ import { Box, Stack, Typography } from "@mui/material";
 import Videos from "./Videos";
 import Sidebar from "./Sidebar";
 import { fetchFromAPI } from "../utils/fetchFromApi";
+
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
+    setVideos(null);
+
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
     }, [selectedCategory]);
@@ -18,7 +21,7 @@ const Feed = () => {
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-          Copyright ©2023 Bang Handsome Media
+          Copyright © 2022 JSM Media
         </Typography>
       </Box>
 
