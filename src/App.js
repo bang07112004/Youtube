@@ -6,16 +6,15 @@ import VideoDetail from "./Components/VideoDetail";
 import ChannelDetail from "./Components/ChannelDetail";
 import SearchFeed from "./Components/SearchFeed";
 
-
 const App = () => (
   <BrowserRouter>
-    <Box sx={{ backgroundColor: '#000' }}>
+    <Box sx={{ backgroundColor: "#000" }}>
       <NavBar />
       <Routes>
-        <Route exact path='/' element={<Feed />} />
-        <Route path='/video/:id' element={<VideoDetail />} />
-        <Route path='/channel/:id' element={<ChannelDetail />} />
-        <Route path='/search/:searchTerm' element={<SearchFeed />} />
+        <Route exact path="/" element={<Feed />} />
+        <Route path="/video/:id" element={<VideoDetail />} />
+        <Route path="/channel/:id" element={<ChannelDetail />} />
+        <Route path="/search/:searchTerm" element={<SearchFeed />} />
       </Routes>
     </Box>
   </BrowserRouter>
