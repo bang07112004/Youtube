@@ -18,8 +18,8 @@ const NavBar = () => (
       <img
         src={logo}
         alt="logo"
-        height={100}
-        width={100}
+        height={70}
+        width={70}
         style={{
           borderRadius: "9999px",
         }}
